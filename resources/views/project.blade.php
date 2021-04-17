@@ -34,6 +34,8 @@
 		      <li class="nav-item">
 		        <a class="nav-link" href="#">Sign Up</a>
 		      </li>
+			  <li><a href="">ru</a></li>
+			  <li><a href="">en</a></li>
 		    </ul>
 		  </div>
 		</nav>
@@ -335,24 +337,25 @@
 							</div>
                 				<div class="column right" >
 
-									<form>
-                        				<div class="fields">
+									<form method="POST" action="{{ route('addimage') }}" enctype="multipart/form-data">
+									{{ csrf_field() }}
+									<div class="fields">
                             				<div class="field name">
-                               				<input  type="text" placeholder="Name" required>
+                               				<input  type="text" name="name" placeholder="Name" required>
                             				</div>
                             					<div class="field email">
-                                				<input  type="email" placeholder="Email" required>
+                                				<input  type="text" name="email" placeholder="Email" required>
                            						</div>
                         				</div>
 
                         					<div class="field textarea">
 
-                            				<textarea cols="20" rows="10"  placeholder="Message.." required></textarea>
+                            				<input type="text" name="message" placeholder="message">
 											
                         					</div>
 											<input type="file" name="image"> 
                         						<div class="button">
-                            					<button type="submit">Send message</button>
+                            					<button type="submit" name="submit">Send message</button>
                         						</div>
 									</form>
                 				</div>

@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\DB;
+use App\Models\Project;
+use App\Http\Controllers\ProjectController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +20,11 @@ Route::get('/', function () {
 });
 
 
-Route::get('/project', function () {
-    return view('project');
+Route::get('/project', 'App\Http\Controllers\ProjectController@index');
+
+Route::post('addimage', 'App\Http\Controllers\ProjectController@store')->name('addimage');
+
+Route::get('lang/{locale}', function ($locale){
+    session()->put('locale', $locale);
+    return redirect()->back();
 });
