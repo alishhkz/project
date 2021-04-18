@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 <head>
 	<title>Project</title>
 	<meta charset="utf-8">
@@ -23,19 +23,25 @@
 		  <div class="collapse navbar-collapse" id="navbarNav">
 		    <ul class="navbar-nav ml-auto">
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">Home</a>
+		        <a class="nav-link" href="#">@lang('lang.home_menu')</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#price">Courses</a>
+		        <a class="nav-link" href="#price">@lang('lang.courses_menu')</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" id="btn_log1" onclick="container2()" href="#">Login</a>
+		        <a class="nav-link" id="btn_log1" onclick="container2()"  href="{{route('send')}}">@lang('lang.login_menu')</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">Sign Up</a>
+		        <a class="nav-link" href="#">@lang('lang.sign_Up')</a>
 		      </li>
-			  <li><a href="">ru</a></li>
-			  <li><a href="">en</a></li>
+			  <div class="dropdown">
+ 				 <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				  @lang('lang.language')</button>
+  						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="">
+    						<a class="dropdown-item" href="project/en">EN</a>
+    						<a class="dropdown-item" href="project/ru">RU</a>
+  						</div>
+				</div>
 		    </ul>
 		  </div>
 		</nav>
@@ -116,30 +122,30 @@
 
 				<section id="about">
 
-							<h2>Top categories</h2>
+							<h2>@lang('lang.top_categories')</h2>
 							<div class="card-deck" style="width: 90%">
   								<div class="card" style="margin-left: 200px">
     							<img class="card-img-top img-fluid" src="https://ultimaxdesigns.com/wp-content/uploads/2020/07/h5J594mu7Wh2NG4cYEyesj-1200-80.png">
     								<div class="card-body">
-      								<p class="card-text">Design</p>
+      								<p class="card-text">@lang('lang.Design')</p>
     								</div>
   								</div>
   									<div class="card">
 			    					<img class="card-img-top img-fluid"  src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80">
 			    						<div class="card-body">
-			      						<p class="card-text">Programming</p>
+			      						<p class="card-text">@lang('lang.Programming')</p>
 			    						</div>
 			 	 					</div>
 			  							<div class="card">
 			    						<img class="card-img-top" src="https://www.educationcenter.cz/assets/images/test/marketing-med-aesthetics-group.jpg">
 			    							<div class="card-body">
-			      							<p class="card-text">Marketing</p>
+			      							<p class="card-text">@lang('lang.Marketing')</p>
 			    							</div>
 			  						</div>
 			  							<div class="card">
     									<img class="card-img-top" src="https://chiefexecutive.net/wp-content/uploads/2018/11/AdobeStock_92323963-compressor-1024x662.jpeg">
     										<div class="card-body">
-      										<p class="card-text">IT & Software</p>
+      										<p class="card-text">@lang('lang.IT & Software')</p>
     										</div>
   										</div>
 
@@ -148,25 +154,25 @@
 		  							<div class="card" style="margin-left: 200px">
 		    						<img class="card-img-top" src="https://www.top10weddingphotographerstoronto.com/wp-content/uploads/2019/03/videography.jpg">
 		    							<div class="card-body">
-		      							<p class="card-text">Videographer</p>
+		      							<p class="card-text">@lang('lang.Videographer')</p>
 		    							</div>
 		  							</div>
 		  								<div class="card">
 					    				<img class="card-img-top" src="https://www.kpinternational.co.uk/wp-content/uploads/2018/11/businessman-man-person-990818.jpg">
 					    					<div class="card-body">
-					      					<p class="card-text">Bussiness</p>
+					      					<p class="card-text">@lang('lang.Bussiness')</p>
 					    					</div>
 					 	 				</div>
 					  			<div class="card">
 					    		<img class="card-img-top" src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80">
 					    			<div class="card-body">
-					      				<p class="card-text">Photography</p>
+					      				<p class="card-text">@lang('lang.Photography')</p>
 					    			</div>
 					  			</div>
 					  				<div class="card">
 		    						<img class="card-img-top" src="https://i.insider.com/5ba3df199c888d60318b4569?width=1100&format=jpeg&auto=webp">
 		    							<div class="card-body">
-		      							<p class="card-text">Music</p>
+		      							<p class="card-text">@lang('lang.Music')</p>
 		    							</div>
 		  							</div>
 
@@ -176,59 +182,53 @@
 				</section>
 					<section id="services">
 						<div class="container">
-							<h1>Our Services</h1>
+							<h1>@lang('lang.Our_Services')</h1>
 							<div class="row services">
 								<div class="col-md-4 text-center">
 									<div class="icon">
 										<i class="fa fa-desktop"></i>
 									</div>
-									<h3>Web Development</h3>
-									<p>Web development is the process of creating a website or web application. The main stages of the process are web design, page layout, client-side and server-side programming, and web server configuration.</p>
+									<h3>@lang('lang.Web_Development')</h3>
+									<p>@lang('lang.text1')</p>
 								</div>
 									<div class="col-md-4 text-center">
 									<div class="icon">
 										<i class="fa fa-tablet"></i>
 									</div>
-									<h3>App Development</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-									consequat.</p>
+									<h3>@lang('lang.App_Development')</h3>
+									<p>@lang('lang.text2')</p>
 									</div>
 										<div class="col-md-4 text-center">
 											<div class="icon">
 											<i class="fa fa-gamepad"></i>
 											</div>
-											<h3>Game Development</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-									consequat.</p>
+											<h3>@lang('lang.Game_Development')</h3>
+											<p>@lang('lang.text3')</p>
 										</div>
 							</div>
 						</div>
 				</section>
 					<section id="price">
 						<div class="container">
-							<h1>Price For Course</h1>
+							<h1>@lang('lang.Price For Course')</h1>
 							<div class="row">
 								<div class="col-md-3">
 									<div class="single-price">
 										<div class="price-head">
-											<h2>Free</h2>
-											<p>$0/<span>month</span></p>
+											<h2>@lang('lang.Free')</h2>
+											<p>$0/<span>@lang('lang.month')</span></p>
 										</div>
 										<div class="price-content">
 											<ul>
-												<li><i class="fa fa-check-circle"></i>5 Courses</li>
-												<li><i class="fa fa-check-circle"></i>10 Electronic Books</li>
-												<li><i class="fa fa-times-circle"></i>Advertising</li>
-												<li><i class="fa fa-times-circle"></i>Unlimited</li>
-												<li><i class="fa fa-times-circle"></i>Unlimited Support</li>
+												<li><i class="fa fa-check-circle"></i>5 @lang('lang.Courses')</li>
+												<li><i class="fa fa-check-circle"></i>10 @lang('lang.Electronic Books')</li>
+												<li><i class="fa fa-times-circle"></i>@lang('lang.Advertising')</li>
+												<li><i class="fa fa-times-circle"></i>@lang('lang.Unlimited')</li>
+												<li><i class="fa fa-times-circle"></i>@lang('lang.Unlimited Support')</li>
 											</ul>
 										</div>
 										<div class="price-button">
-											<a class="buy-btn" href="#">Join Free</a>
+											<a class="buy-btn" href="#">@lang('lang.Join_Free')</a>
 										</div>
 									</div>
 								</div>
@@ -236,19 +236,19 @@
 									<div class="single-price">
 										<div class="price-head">
 											<h2>Start</h2>
-											<p>$10/<span>month</span></p>
+											<p>$10/<span>@lang('lang.month')</span></p>
 										</div>
 										<div class="price-content">
 											<ul>
-												<li><i class="fa fa-check-circle"></i>15 Courses</li>
-												<li><i class="fa fa-check-circle"></i>100 Electronic Books</li>
-												<li><i class="fa fa-check-circle"></i>15 Videos</li>
-												<li><i class="fa fa-times-circle"></i>Unlimited</li>
-												<li><i class="fa fa-times-circle"></i>Unlimited Support</li>
+												<li><i class="fa fa-check-circle"></i>15 @lang('lang.Courses')</li>
+												<li><i class="fa fa-check-circle"></i>100 @lang('lang.Electronic Books')</li>
+												<li><i class="fa fa-check-circle"></i>15 @lang('lang.Videos')</li>
+												<li><i class="fa fa-times-circle"></i>@lang('lang.Unlimited')</li>
+												<li><i class="fa fa-times-circle"></i>@lang('lang.Unlimited Support')</li>
 											</ul>
 										</div>
 										<div class="price-button">
-											<a class="buy-btn" href="#">Buy Now</a>
+											<a class="buy-btn" href="#">@lang('lang.Buy Now')</a>
 										</div>
 									</div>
 								</div>
@@ -256,19 +256,19 @@
 									<div class="single-price">
 										<div class="price-head">
 											<h2>Business</h2>
-											<p>$50/<span>month</span></p>
+											<p>$50/<span>@lang('lang.month')</span></p>
 										</div>
 										<div class="price-content">
 											<ul>
-												<li><i class="fa fa-check-circle"></i>50 Courses</li>
-												<li><i class="fa fa-check-circle"></i>200 Electronic Books</li>
-												<li><i class="fa fa-check-circle"></i>50 Videos</li>
-												<li><i class="fa fa-check-circle"></i>Unlimited</li>
-												<li><i class="fa fa-times-circle"></i>Unlimited Support</li>
+												<li><i class="fa fa-check-circle"></i>50 @lang('lang.Courses')</li>
+												<li><i class="fa fa-check-circle"></i>200 @lang('lang.Electronic Books')</li>
+												<li><i class="fa fa-check-circle"></i>50 @lang('lang.Videos')</li>
+												<li><i class="fa fa-check-circle"></i>@lang('lang.Unlimited')</li>
+												<li><i class="fa fa-times-circle"></i>@lang('lang.Unlimited Support')</li>
 											</ul>
 										</div>
 										<div class="price-button">
-											<a class="buy-btn" href="#">Buy Now</a>
+											<a class="buy-btn" href="#">@lang('lang.Buy Now')</a>
 										</div>
 									</div>
 								</div>
@@ -276,19 +276,19 @@
 									<div class="single-price">
 										<div class="price-head">
 											<h2>Advanced</h2>
-											<p>$100/<span>month</span></p>
+											<p>$100/<span>@lang('lang.month')</span></p>
 										</div>
 										<div class="price-content">
 											<ul>
-												<li><i class="fa fa-check-circle"></i>100+ Courses</li>
-												<li><i class="fa fa-check-circle"></i>Unlimited Books</li>
-												<li><i class="fa fa-check-circle"></i>Unlimited Videos</li>
-												<li><i class="fa fa-check-circle"></i>Unlimited</li>
-												<li><i class="fa fa-check-circle"></i>Unlimited Support</li>
+												<li><i class="fa fa-check-circle"></i>100+ @lang('lang.Courses')</li>
+												<li><i class="fa fa-check-circle"></i>@lang('lang.Unlimited Books')</li>
+												<li><i class="fa fa-check-circle"></i>@lang('lang.Unlimited Videos')</li>
+												<li><i class="fa fa-check-circle"></i>@lang('lang.Unlimited')</li>
+												<li><i class="fa fa-check-circle"></i>@lang('lang.Unlimited Support')</li>
 											</ul>
 										</div>
 										<div class="price-button">
-											<a class="buy-btn" href="#">Buy Now</a>
+											<a class="buy-btn" href="#">@lang('lang.Buy Now')</a>
 										</div>
 									</div>
 								</div>
@@ -324,7 +324,7 @@
 			
 									<section class="contact" id="contact">
         			<div class="max-width">
-            		<h2 class="title">Contact me</h2>
+            		<h2 class="title">Contact Us</h2>
 						<div class="contact-content">
                 			<div class="column left">
 
@@ -336,22 +336,34 @@
 									</div>
 							</div>
                 				<div class="column right" >
-
+								@if(session()->has('message'))
+                    <div class="alert alert-success">
+                        {{ session()->get('message') }}
+                    </div>
+                @endif
 									<form method="POST" action="{{ route('addimage') }}" enctype="multipart/form-data">
-									{{ csrf_field() }}
+									@csrf
 									<div class="fields">
                             				<div class="field name">
                                				<input  type="text" name="name" placeholder="Name" required>
+											   @error('name')
+                                <span class="text-danger"> {{ $message }} </span>
+                                @enderror
                             				</div>
                             					<div class="field email">
                                 				<input  type="text" name="email" placeholder="Email" required>
+												@error('email')
+                                <span class="text-danger"> {{ $message }} </span>
+                                @enderror
                            						</div>
                         				</div>
 
                         					<div class="field textarea">
 
                             				<input type="text" name="message" placeholder="message">
-											
+											@error('content')
+                        <span class="text-danger"> {{ $message }} </span>
+                        @enderror
                         					</div>
 											<input type="file" name="image"> 
                         						<div class="button">
@@ -373,9 +385,10 @@
 								<p>Copyright © 2021 EduX Academy</p>
 						</div>
 						<style>
-							html {
+html {
 	scroll-behavior: smooth;
 }
+
 * {
 	margin: 0;
 	padding: 0;
@@ -750,6 +763,10 @@ footer p {
 	margin-right: 10px;
 	text-decoration: none;
 	border-radius: 4px;
+}
+.dropdown-menu {
+	min-width: 110px;
+    height: 100px !important;
 }
 .sci li a:hover {
 	background: #f00;
