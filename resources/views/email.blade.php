@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Mail Send in Laravel Example</title>
+<title>Login</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Courgette|Pacifico:400,700">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -69,7 +69,7 @@ body {
 	<div class="row">
 		<div class="col-md-8 mx-auto">
 			<div class="contact-form">
-				<h1>Get in Touch</h1>
+				<h1>Login</h1>
                 @if(session()->has('message'))
                     <div class="alert alert-success">
                         {{ session()->get('message') }}
@@ -99,15 +99,15 @@ body {
 					</div>            
 					<div class="form-group">
 						<label for="inputSubject">Subject</label>
-                        <input type="text" name="subject" class="form-control" placeholder="Enter subject">
+                        <input type="text" name="subject" class="form-control" placeholder="Enter Surname">
                         @error('subject')
                         <span class="text-danger"> {{ $message }} </span>
                         @enderror
 					</div>
 					<div class="form-group">
 						<label for="inputMessage">Message</label>
-                        <textarea name="content" rows="5" class="form-control" placeholder="Enter Your Message"></textarea>
-                        @error('content')
+                        <textarea name="message" rows="5" class="form-control" placeholder="Enter Your Message"></textarea>
+                        @error('message')
                         <span class="text-danger"> {{ $message }} </span>
                         @enderror
 					</div>

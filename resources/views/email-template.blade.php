@@ -1,17 +1,5 @@
-<div class="container">
-     <div class="row justify-content-center">
-         <div class="col-md-8">
-             <div class="card">
-                 <div class="card-header">Welcome!</div>
-                   <div class="card-body">
-                    @if (session('resent'))
-                         <div class="alert alert-success" role="alert">
-                            {{ __('A fresh mail has been sent to your email address.') }}
-                        </div>
-                    @endif
-                    {!! $content !!}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
+<h3>Name {{ $data['name']}}</h3>
+<h1>From {{ $data['email'] }}</h1><br>
+<h3>Subject:  {{ $data['subject'] }}</h3>
+<p>{{ $data['message'] }}</p>

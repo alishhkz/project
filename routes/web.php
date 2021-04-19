@@ -32,7 +32,7 @@ Route::get('project/{locale}', function($locale) {
 });
 
 Route::get('/email', 'App\Http\Controllers\SendEmailController@create');
-Route::post('/email', 'App\Http\Controllers\SendEmailController@sendEmail')->name('send.email');
+Route::post('/email/send', 'App\Http\Controllers\SendEmailController@sendEmail')->name('send.email');
 
 Route::get('/send', function () {
     return view('email');
